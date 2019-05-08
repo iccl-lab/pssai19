@@ -1,6 +1,6 @@
 % Crossword Puzzle
 
-% definition of the albhabet
+% definition of the alphabet
 enum ABC = {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z};
 
 % definition of the possible words as arrays
