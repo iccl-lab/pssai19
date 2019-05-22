@@ -91,8 +91,10 @@ def astar_search(maze, heuristic=manhatten_distance):
     # add the start node with pure heuristic distance to prio_queue node list
     prio_queue.append((f_score[START], START))
 
+    # we keep exploring nodes until the priority queue is empty,
+    # OR we found the GOAL
     while prio_queue:
-        # get the node with least f-score
+        # pop the node with least f-score
         (f_current, current) = hq.heappop(prio_queue)
 
         print("Next node is " + str(current))
@@ -123,7 +125,10 @@ def astar_search(maze, heuristic=manhatten_distance):
             g_score[neighbor] = new_g_val
             origin[neighbor] = current
             f_score[neighbor] = g_score[neighbor] + heuristic(neighbor, GOAL)
-            hq.heappush(prio_queue, (f_score[neighbor], neighbor))
+
+            # crucial test whether
+            if (f_score[neighbor], neighbor) not in prio_queue:
+                hq.heappush(prio_queue, (f_score[neighbor], neighbor))
 
     print("No path found? ...something is wrong here.")
     return []

@@ -1,5 +1,4 @@
-# this one is too hard to solve
-# ...or can your implementation?
+# the maze from the exercise sheet
 E,E,E,E,E,W,E,E,E,E,E,W,E,E,E,C
 E,E,E,E,E,W,E,E,E,E,E,W,E,E,E,E
 E,E,E,E,E,W,E,E,E,E,E,W,E,E,E,E
